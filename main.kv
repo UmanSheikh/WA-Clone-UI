@@ -1,0 +1,45 @@
+BoxLayout:
+    orientation: 'vertical'
+    MDTopAppBar:
+        title: 'Whatsapp'
+        right_action_items: [ ['magnify', lambda x: print("Search")], ['dots-vertical', lambda x: print('dots-vertical')]]
+        # md_bg_color: 0, 1, 0, 1
+    MDTabs:
+        id: tabs
+        on_tab_switch: app.on_tab_switch(*args)
+        tab_hint_x: True
+        Tab:
+            title: 'Chats'
+            ScrollView:
+                MDList:
+                    TwoLineAvatarIconListItem:
+                        text: "Uman"
+                        secondary_text: "This is my Whatsapp Clone"
+                        IconLeftWidget:
+                            icon: "uman.png"
+                    TwoLineAvatarIconListItem:
+                        text: "Uman"
+                        secondary_text: "Using Python kivy"
+                        IconLeftWidget:
+                            icon: "uman.png"
+                    TwoLineAvatarIconListItem:
+                        text: "Uman"
+                        secondary_text: "It is cross Platform"
+                        IconLeftWidget:
+                            icon: "uman.png"
+                    TwoLineAvatarIconListItem:
+                        text: "Uman"
+                        secondary_text: "So it can run on Mac, IOS, Linux, Android"
+                        IconLeftWidget:
+                            icon: "uman.png"
+        Tab:
+            title: 'Status'
+            MDLabel:
+                text: 'Status'
+                halign: 'center'
+        Tab:
+            title: 'Calls'
+            MDLabel:
+                text: 'Calls'
+                halign: 'center'
+    
